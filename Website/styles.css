@@ -1,0 +1,113 @@
+:root{
+    --bgc:#212226;
+    --ncol:#29fd53;
+    --text:#fff;
+    --sidebar:rgb(26, 26, 26);
+    --txtsz:2em;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100%;
+    background-color: var(--bgc);
+}
+
+.sidebar{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: 80vh;
+    font-weight: 500;
+    background-color: var(--sidebar);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition: 2s;
+}
+
+.sidebar:hover{
+}
+
+.sidebar ul{
+    display: grid;
+    align-items: center;
+    height: 100%;
+}
+
+.sidebar ul li{
+    width: 100%;
+    display: grid;
+    align-items: center;
+    list-style: none;
+    transition: 0.5s;
+}
+
+.sidebar ul li a{
+    position: relative;
+    display: grid;
+    align-items: center;
+    text-align: center;
+}
+
+.sidebar ul li a .text{
+    text-align: center;
+    color: var(--text);
+    font-weight: 450;
+    font-size: var(--txtsz);
+    transition: 0.5s;
+    opacity: 0;
+    grid-row: 1;
+    grid-column: 1;
+    transform: translateY(20px);
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+.sidebar ul li:hover{
+    background-color: var(--bgc);
+    border-radius: 25px;
+}
+
+.sidebar ul li:hover a .text{
+
+    opacity: 1;
+}
+
+.sidebar ul li a .icon{
+    position: relative;
+    display: block;
+    line-height: 75px;
+    text-align: center;
+    font-size: var(--txtsz);
+    color: var(--text);
+    transition: 0.5s;
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.sidebar ul li:hover a .icon{
+    transform: translateY(-10px);
+}
+
+a{
+    text-decoration: none;
+}
+
+a:link{
+    color: var(--bgc);
+}
+
+
+.sidebar ul li.active a .icon{
+    color:var(--ncol);
+}
+
+.sidebar ul li.active a .text{
+    color:var(--ncol);
+}
