@@ -1,9 +1,13 @@
 :root{
     --bgc:#212226;
     --ncol:#29fd53;
+    --hovcol:#35b44f;
     --text:#fff;
     --sidebar:rgb(26, 26, 26);
     --txtsz:2em;
+    --transpeed:0.5s;
+    --bgpic1: url("Images/genericBackground1.jpg");
+    --bgpic2:url("Images/genericBackground2.jpg");
 }
 
 *{
@@ -17,21 +21,20 @@ body{
 }
 
 .sidebar{
+    top: 0;
+    left: 0;
+    position: fixed;
     margin-top: 5%;
     margin-bottom: 5%;
     display: grid;
     justify-content: center;
     align-items: center;
-    width: fit-content;
+    width: 15vh;
     height: 80vh;
     font-weight: 500;
     background-color: var(--sidebar);
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    transition: 2s;
-}
-
-.sidebar:hover{
 }
 
 .sidebar ul{
@@ -45,7 +48,7 @@ body{
     display: grid;
     align-items: center;
     list-style: none;
-    transition: 0.5s;
+    transition: var(--transpeed);
 }
 
 .sidebar ul li a{
@@ -60,7 +63,7 @@ body{
     color: var(--text);
     font-weight: 450;
     font-size: var(--txtsz);
-    transition: 0.5s;
+    transition: var(--transpeed);
     opacity: 0;
     grid-row: 1;
     grid-column: 1;
@@ -69,13 +72,8 @@ body{
     margin-right: 10px;
 }
 
-.sidebar ul li:hover{
-    background-color: var(--bgc);
-    border-radius: 25px;
-}
-
 .sidebar ul li:hover a .text{
-
+    color: var(--hovcol);
     opacity: 1;
 }
 
@@ -86,13 +84,14 @@ body{
     text-align: center;
     font-size: var(--txtsz);
     color: var(--text);
-    transition: 0.5s;
+    transition: var(--transpeed);
     grid-row: 1;
     grid-column: 1;
 }
 
 .sidebar ul li:hover a .icon{
     transform: translateY(-10px);
+    color: var(--hovcol);
 }
 
 a{
@@ -105,9 +104,31 @@ a:link{
 
 
 .sidebar ul li.active a .icon{
-    color:var(--ncol);
+    color: var(--ncol);
 }
 
 .sidebar ul li.active a .text{
-    color:var(--ncol);
+    color: var(--ncol);
+}                                                                    
+
+.parralax{
+    background-image: var(--bgpic1);
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parralax2{
+    background-image: var(--bgpic2);
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.textSection{
+    height: 50vh;
 }
