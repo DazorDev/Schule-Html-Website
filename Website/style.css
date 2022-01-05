@@ -17,10 +17,10 @@
     font-family: laBelleAurore;
     font-size: var(--tagSize);
     position: absolute;
-    top: -1em;
+    top: -1.5em;
     left: -1em;
     color: var(--textc);
-
+    font-weight: bold;
 }
 
 *::after{
@@ -30,7 +30,7 @@
     left: -1em;
     bottom: -1.5em;
     color: var(--textc);
-    
+    font-weight: bold;
 }
 
 @font-face{
@@ -78,9 +78,11 @@ body{
     background-color: var(--bgc);
     height: 100vh;
     width: 100%;
+    overflow: hidden;
 }
 
 .secondWrapper{
+    margin-left: 1rem;
     position: absolute;
     top: 0%;
     width: 100%;
@@ -108,6 +110,7 @@ h1::after{
     color: var(--textc);
     font-family: laBelleAurore;
     font-size: var(--tagSize);
+    font-weight: bold;
 }
 
 .tagTags{
@@ -136,18 +139,19 @@ h1::after{
 }
 
 .sections{
-    height: 50vh;
+    height: 100vh;
     overflow: hidden;
     background-color: var(--bgc);
-    padding: 9rem 3rem;
+    margin: 8rem 5rem;
 }
 
 .maintext{
     text-align: left;
     color: var(--maintxtc);
-    font-size: 3em;
+    font-size: 5rem;
     font-family: CarterOne;
-
+    height: 100%;
+    display: inline-block;
 }
 
 .textWrapper{
@@ -155,23 +159,21 @@ h1::after{
     position: relative;
     left: 6em;
     width: max-content;
-    height: max-content;
-    margin-left: 3em;
+    height: fit-content;
+    margin-left: 3rem;
     margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .top{
-    margin-top: 1em;
+    margin-top: 1rem;
     position: absolute;
-    left: 0;
     margin-bottom: 2em;
 }
 
 .bottom{
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
     position: absolute;
-    left: 0;
     bottom: 0;
     margin-top:2em;
 }
@@ -187,18 +189,33 @@ h1::after{
 .list{
     list-style: none;
     width: 100%;
-    height: 100%;
+    height: 12rem;
+    overflow: hidden;
+    line-height: 4rem;
 }
 
 .animationWrapper{
-    width: 100%;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    height: 4rem;
+
+}
+
+.brackets{
+    text-align: left;
+    color: var(--maintxtc);
+    font-size: 3rem;
+    font-family: Consolas;
     height: 100%;
+    display: inline-block;
 }
 
 .dynamic-text{
+    margin-left: 0.3rem;
+    font-family: Consolas;
     position: relative;
     color: var(--ncol);
-    margin-bottom: 1em;
 }
 
 .dynamic-text::after{
@@ -208,9 +225,38 @@ h1::after{
     width: 100%;
     left: 0;
     top: 0;
-    border-left: 0.1em solid var(--ncol);
+    bottom: 0;
+    right: 0;
+    border-left: 0.1rem solid var(--ncol);
+    background: var(--bgc);
+    animation: typing 1.5s steps(14) infinite;
 }
 
-@keyframes animate {
+.element{
+    position: relative;
+    top: 0;
+    animation: nextElement 6s steps(4) infinite;
+}
 
+.navbar{
+    width: 7rem;
+    height: 100%;
+    background-color: var(--containerblack);
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-right: 1rem;
+    z-index: 1;
+}
+
+@keyframes typing {
+    100%{
+        left:110%;
+    }
+}
+
+@keyframes nextElement{
+    100%{
+        top: -18.75rem;
+    }
 }
