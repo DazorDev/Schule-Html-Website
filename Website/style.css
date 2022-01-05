@@ -6,6 +6,8 @@
     --sidetxtc:rgb(148, 148, 148);
     --ncol:#02f093;
     --tagSize: 1.5rem;
+    --mainTxtSize: ;
+    --dynamicTxtSize: ;
 }
 
 *{
@@ -20,7 +22,7 @@
     top: -1.5em;
     left: -1em;
     color: var(--textc);
-    font-weight: bold;
+    font-weight: normal;
 }
 
 *::after{
@@ -30,7 +32,7 @@
     left: -1em;
     bottom: -1.5em;
     color: var(--textc);
-    font-weight: bold;
+    font-weight: normal;
 }
 
 @font-face{
@@ -90,27 +92,35 @@ body{
     background-color: var(--bgc);
 }
 
-p::before{
+.pTag::before{
     content: "<p>";
 }
 
-p::after{
+.pTag::after{
     content: "</p>";
 }
 
-h1::before{
+.hTag::before{
     content: "<h1>";
 }
 
-h1::after{
+.hTag::after{
     content: "</h1>";
+}
+
+.styleTag::before{
+    content: "<style>"
+}
+
+.styleTag::after{
+    content: "</style>"
 }
 
 .tag{
     color: var(--textc);
     font-family: laBelleAurore;
     font-size: var(--tagSize);
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .tagTags{
@@ -163,7 +173,7 @@ h1::after{
     height: fit-content;
     margin-left: 3rem;
     margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .top{
@@ -239,10 +249,6 @@ h1::after{
     display: flex;
 }
 
-.changingText{
-    margin-left: 8rem;
-}
-
 .navbar{
     width: 7rem;
     height: 100%;
@@ -263,5 +269,11 @@ h1::after{
 @keyframes nextElement{
     100%{
         top: -16rem;
+    }
+}
+
+@keyframes SQUISH{
+    100%{
+        font-size: ;
     }
 }
