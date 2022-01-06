@@ -7,7 +7,9 @@
     --ncol:#02f093;
     --tagSize: 1.5rem;
     --mainTxtSize: 5rem;
-    --dynamicTxtSize: ;
+    --navbarwidth: 8rem;
+    --navbarfontsize: 1.5rem;
+    --bracketfontsize: 3rem
 }
 
 *{
@@ -39,36 +41,36 @@
 
 @font-face{
     font-family: pacifico;
-    src: url('../fonts/Pacifico.eot');
-    src: url('../fonts/Pacifico.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/Pacifico.woff2') format('woff'),
-         url('../fonts/Pacifico.woff2') format('woff2'),
-         url('../fonts/Pacifico.ttf') format('truetype'),
-         url('../fonts/Pacifico.eot') format('eot');
+    src: url("./fonts/Pacifico.eot");
+    src: url("./fonts/Pacifico.eot?#iefix") format('embedded-opentype'),
+         url("./fonts/Pacifico.woff2") format('woff'),
+         url("./fonts/Pacifico.woff2") format('woff2'),
+         url("./fonts/Pacifico.ttf") format('truetype'),
+         url("./fonts/Pacifico.eot") format('eot');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: laBelleAurore;
-    src: url("../fonts/LaBelleAurore-Regular.eot");
-    src: url('../fonts/LaBelleAurore-Regular.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/LaBelleAurore-Regular.woff2') format('woff'),
-         url('../fonts/LaBelleAurore-Regular.woff2') format('woff2'),
-         url('../fonts/LaBelleAurore-Regular.ttf') format('truetype'),
-         url('../fonts/LaBelleAurore-Regular.eot') format('eot');
+    src: url("./fonts/LaBelleAurore-Regular.eot");
+    src: url('./fonts/LaBelleAurore-Regular.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/LaBelleAurore-Regular.woff2') format('woff'),
+         url('./fonts/LaBelleAurore-Regular.woff2') format('woff2'),
+         url('./fonts/LaBelleAurore-Regular.ttf') format('truetype'),
+         url('./fonts/LaBelleAurore-Regular.eot') format('eot');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: CarterOne;
-    src: url("../fonts/CarterOne-Regular.eot");
-    src: url('../fonts/CarterOne-Regular.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/CarterOne-Regular.woff2') format('woff'),
-         url('../fonts/CarterOne-Regular.woff2') format('woff2'),
-         url('../fonts/CarterOne-Regular.ttf') format('truetype'),
-         url('../fonts/CarterOne-Regular.eot') format('eot');
+    src: url("./fonts/CarterOne-Regular.eot");
+    src: url('./fonts/CarterOne-Regular.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/CarterOne-Regular.woff2') format('woff'),
+         url('./fonts/CarterOne-Regular.woff2') format('woff2'),
+         url('./fonts/CarterOne-Regular.ttf') format('truetype'),
+         url('./fonts/CarterOne-Regular.eot') format('eot');
     font-weight: normal;
     font-style: normal;
 }
@@ -81,7 +83,7 @@ body{
     position: relative;
     background-color: var(--bgc);
     height: fit-content;
-    width: 100%;
+    width: fit-content;
     overflow: hidden;
 }
 
@@ -151,7 +153,6 @@ body{
 
 .sections{
     height: fit-content;
-    width: 100%;
     overflow: hidden;
     background-color: var(--bgc);
     margin: 8rem 6rem;
@@ -220,6 +221,7 @@ body{
     font-family: Consolas;
     height: 100%;
     display: inline-block;
+    font-size: var(--bracketfontsize);
 }
 
 .dynamic-text{
@@ -251,7 +253,7 @@ ul.animationWrapper .element{
 }
 
 .navbar{
-    width: 7rem;
+    width: var(--navbarwidth);
     height: 100%;
     background-color: var(--containerblack);
     position: fixed;
@@ -269,6 +271,8 @@ ul.animationWrapper .element{
 .navbar .list .element .link{
     color: var(--ncol);
     text-align: center;
+    font-size: var(--navbarfontsize);
+    font-family: pacifico;
 }
 
 .navbar .list .element{
@@ -287,12 +291,13 @@ ul.animationWrapper .element{
 }
 
 .container{
-    width: 30rem;
-    height: 20rem;
+    width: 20rem;
+    height: 15rem;
     background-color: var(--containerblack);
     -webkit-box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%), 0 1px 10px 0 rgb(0 0 0 / 12%);
     box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%), 0 1px 10px 0 rgb(0 0 0 / 12%);
     margin: 2rem;
+    padding-right: 10vw;
 }
 
 .sectionWrapper{
@@ -317,3 +322,10 @@ ul.animationWrapper .element{
         top: -16rem;
     }
 }
+
+@media screen and (max-width: 810px) {
+    :root{
+        --mainTxtSize: 3rem;
+        --bracketfontsize: 1.5rem;
+    }
+} 
