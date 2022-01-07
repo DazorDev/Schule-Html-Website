@@ -79,6 +79,7 @@
 
 body{
     background-color: var(--bgc);
+    overflow-x: none;
 }
 
 .wrapper{
@@ -338,6 +339,6 @@ ul.animationWrapper .element{
 @media screen and (max-width: 600px){
     :root{
         --navbarwidth: 0rem;
-        --textWrapperMarginLeft: 0rem;
+        --textWrapperMarginLeft: 1.5rem;
     }
 }
