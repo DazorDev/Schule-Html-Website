@@ -168,7 +168,7 @@ body{
     font-size: var(--mainTxtSize);
     font-family: CarterOne;
     height: 100%;
-    display: inline-block;
+
 }
 
 .textWrapper{
@@ -180,6 +180,8 @@ body{
     margin-top: 2rem;
     overflow: visible;
     margin-bottom: 3rem;
+    transition: all 1s;
+    white-space: nowrap;
 }
 
 .top{
@@ -200,7 +202,7 @@ body{
 }
 
 .text{
-    font-family: pacifico;
+    transition: 0.5s;
 }
 
 .list{
@@ -265,6 +267,7 @@ ul.animationWrapper .element{
     left: 0;
     margin-right: var(--navbarmargin);
     z-index: 3;
+    transition: all 1s;
 }
 
 .navbar .list{
@@ -322,23 +325,25 @@ ul.animationWrapper .element{
     }
 }
 
-@media screen and (max-width: 909px) {
+@media screen and (max-width: 930px) {
     :root{
         --mainTxtSize: 4rem;
         --bracketfontsize: 2rem;
     }
 } 
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 730px){
     :root{
+        --navbarwidth: 0rem;
         --mainTxtSize: 3rem;
         --bracketfontsize: 1.5rem;
+        --textWrapperMarginLeft: 1.5rem;
+    }
+    .navbar{
+        left: -10rem;
     }
 }
 
-@media screen and (max-width: 600px){
-    :root{
-        --navbarwidth: 0rem;
-        --textWrapperMarginLeft: 1.5rem;
-    }
+@media screen and (max-width: 690px){
+    
 }
