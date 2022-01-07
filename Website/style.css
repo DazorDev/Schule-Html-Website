@@ -12,6 +12,8 @@
     --navbarfontsize: 1.5rem;
     --navbarmargin: 1rem;
     --textWrapperMarginLeft: 9rem;
+    --containerWidth: 20rem;
+    --containerHeight: 15rem;
 }
 
 *{
@@ -294,12 +296,13 @@ ul.animationWrapper .element{
 }
 
 .container{
-    width: 20rem;
-    height: 15rem;
+    width: var(--containerWidth);
+    height: var(--containerHeight);
     background-color: var(--containerblack);
     -webkit-box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%), 0 1px 10px 0 rgb(0 0 0 / 12%);
     box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%), 0 1px 10px 0 rgb(0 0 0 / 12%);
     margin: 2rem;
+    flex-basis: 50%;
 }
 
 .sectionWrapper{
@@ -334,7 +337,6 @@ ul.animationWrapper .element{
 
 @media screen and (max-width: 730px){
     :root{
-        --navbarwidth: 0rem;
         --mainTxtSize: 3rem;
         --bracketfontsize: 1.5rem;
         --textWrapperMarginLeft: 1.5rem;
