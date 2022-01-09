@@ -160,7 +160,7 @@ body{
     height: fit-content;
     overflow: hidden;
     background-color: var(--bgc);
-    margin: 8rem 6rem;
+    padding: 8rem 6rem;
     width: fit-content;
 }
 
