@@ -276,7 +276,7 @@ ul.animationWrapper .element{
     left: 0;
     margin-right: var(--navbarmargin);
     z-index: 3;
-    transition: all 0.5s;
+    transition: all 1s;
 }
 
 .navbar .list{
@@ -324,13 +324,13 @@ ul.animationWrapper .element{
 .mobileButton{
     background-color: #02f093;
     visibility: hidden;
-    width: 2rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
     position: absolute;
     top: 0;
     right: 0;
     margin: 2rem 2rem;
-    z-index: 5;
+
 }
 
 .containerText{
