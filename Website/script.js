@@ -4,6 +4,7 @@ button = document.getElementById("open")
 window.addEventListener("resize", function(){
     let width = window.innerWidth;
     if(width >= 730){
+        navbar.style.transition = 0.5+"s";
         navbar.style.left = 0;
         navbar.style.width = "8rem";
         button.id = "open";
@@ -12,9 +13,8 @@ window.addEventListener("resize", function(){
         navbar.style.left = "-10rem";
     };
     if(button.id == "close"){
-        navbar.style.transition = 0;
+        navbar.style.transition = 0+"s";
         navbar.style.width = width+"px";
-        navbae.style.transition = 0.5+"s";
     }
 });
 
@@ -26,6 +26,7 @@ function moveNavbar(){
         console.log(navbar.style.width, window.innerWidth);
     }
     else{
+        navbar.style.transition = 0.5+"s";
         navbar.style.left = "-10rem";
         button.id = "open";
         navbar.style.width = "8rem";

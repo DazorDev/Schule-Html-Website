@@ -1,6 +1,7 @@
 :root{
     --bgc:#1d1d1d;
     --textc:#515152;
+    --bgtextc: #3f3f3f;
     --containerblack:#141414;
     --maintxtc:white;
     --sidetxtc:rgb(148, 148, 148);
@@ -169,6 +170,7 @@ body{
     background-color: var(--bgc);
     padding: 8rem 6rem;
     width: fit-content;
+    position: relative;
 }
 
 .maintext{
@@ -309,6 +311,7 @@ ul.animationWrapper .element{
     box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%), 0 1px 10px 0 rgb(0 0 0 / 12%);
     margin: 2rem;
     flex-basis: 50%;
+    transition: 0.5s;
 }
 
 .sectionWrapper{
@@ -326,7 +329,7 @@ ul.animationWrapper .element{
     visibility: hidden;
     width: 2rem;
     height: 2rem;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     margin: 2rem 2rem;
@@ -335,6 +338,16 @@ ul.animationWrapper .element{
 
 .containerText{
     color: var(--ncol);
+}
+
+.backgroundText{
+    z-index: 3;
+    opacity: 15%;
+    color: var(--bgtextc);
+    position: absolute;
+    font-size: 20vw;
+    top: 0;
+    left: 20%;
 }
 
 @keyframes typing {
@@ -363,6 +376,8 @@ ul.animationWrapper .element{
         --bracketfontsize: 1.5rem;
         --textWrapperMarginLeft: 1.5rem;
         --tagSize: 1.25rem;
+        --containerWidth: 15rem;
+        --containerHeight: 10rem;
     }
     .navbar{
         left: -10rem;
@@ -377,6 +392,8 @@ ul.animationWrapper .element{
         --mainTxtSize: 2rem;
         --bracketfontsize: 1rem;
         --textWrapperMarginLeft: 1rem;
-        --tagSize: 1rem
+        --tagSize: 1rem;
+        --containerWidth: 10rem;
+        --containerHeight: 10rem;
     }
 }
