@@ -1,47 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skills — Daniel Banic</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="navbar" id="navbar">
-        <ul class="list">
-            <li class="element">
-                <a class="link" href="index.html">Home</a>
-            </li>
-            <li class="element">
-                <a class="link" href="projects.html">Projects</a>
-            </li>
-            <li class="element">
-                <a class="link" href="skills.html">Skills</a>
-            </li>
-            <li class="element">
-                <a class="link" href="test.html">TEST</a>
-            </li>
-            <li class="element">
-                <a class="link" href=""></a>
-            </li>
-        </ul>
-    </div>     
-    <div class="textWrapper top">
-        <span class="tag topTags">&lt;html&gt;</span><br>
-    </div>  
-    <div class="textWrapper bottom">
-        <span class="tag bottomTags">&lt;/html&gt;</span>
-    </div>
-
-    <section>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home — Daniel Banic</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="./images/favicon.png">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="navbar" id="navbar">
+                <ul class="list">
+                    <li class="element">
+                        <a class="link" href="index.html">Home</a>
+                    </li>
+                    <li class="element">
+                        <a class="link" href="projects.html">Projects</a>
+                    </li>
+                    <li class="element">
+                        <a class="link" href="skills.html">Skills</a>
+                    </li>
+                    <li class="element">
+                        <a class="link" href="test.html">TEST</a>
+                    </li>
+                    <li class="element">
+                        <a class="link" href=""></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="textWrapper top">
+                <span class="tag topTags text">&lt;html&gt;</span><br>
+            </div>
+            <section class="sections mainsection" id="homeSection">
+                <div class="textWrapper">
+                    <h1 class="maintext text">WHY ARE YOU?</h1>
+                </div>
+            </section>
+            
+            <div class="textWrapper bottom">
+                <span class="tag bottomTags text">&lt;/html&gt;</span>
+            </div>
+        </div>
+        <button class="mobileButton" id="open" onclick="moveNavbar()"></button>
+        <canvas id="background"></canvas>
         
-
-
-    </section>
-    
-    <button class="mobileButton" id="open" onclick="moveNavbar()"></button>
-
-    <script src="script.js"></script>
-</body>
+        <script src="background.js"></script>
+        <script src="script.js"></script>
+    </body>
 </html>
