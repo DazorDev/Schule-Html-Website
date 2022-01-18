@@ -168,7 +168,7 @@ body{
 }
 
 .sections{
-    height: 80vh;
+    height: 75vh;
     overflow: hidden;
     background-color: var(--bgc);
     padding: 8rem 6rem;
@@ -182,7 +182,6 @@ body{
     font-size: var(--mainTxtSize);
     font-family: CarterOne;
     height: 100%;
-
 }
 
 .textWrapper{
