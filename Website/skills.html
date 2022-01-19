@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,7 +20,7 @@
                     <a class="link" href="about.html">Über mich</a>
                 </li>
                 <li class="element">
-                    <a class="link" href="skills.html">Skills</a>
+                    <a class="link" href="skills.html">Fähigkeiten</a>
                 </li>
                 <li class="element">
                     <a class="link" href="hobbies.html">Hobbies</a>
@@ -34,26 +34,42 @@
         </div>
         
 
-        <section class="sections mainsection" id="homeSection">
+
+        <section class="sections">
             <div class="textWrapper">
-                <h1 class="mainText text hTag">Skills</h1>
+                <h1 class="mainText text hTag">Fähigkeiten</h1>
             </div>
             <div class="textWrapper">
                 <p class="sideText text pTag">
-                    
+                       Zu meinen Fähigkeiten gehören das schnelle
+                    <br>Verstehen von verschiedenen Konzepten, aus 
+                    <br>jeglichen richtungen, Beispielsweise aus dem 
+                    <br>Bereich der Physik, z.B. bezogen auf dem aufbau
+                    <br>eines Computers durch Logikschaltern, oder aus 
+                    <br>dem Bereich der Mathematik, z.B. bezogen auf 
+                    <br>die verwendendung der O(n) schreibweise zum
+                    <br>optimieren eines Algorithmuses.
+                    <br><br>
+                        Zusätzlich besitze ich auch noch Wissen 
+                    <br>über verschiedene Datenstrukturen, Algorithmen,
+                    <br>bestimmte Teile der Kryptografie, Automatisierung
+                    <br>von monotonen Aufgaben, Webdevelopment und 
+                    <br>Webdesign, sowie ein Grundverständnis über die
+                    <br>Spieleentwicklung.
+                    <br><br>
+                        Zu den Programmiersprachen in welchen ich 
+                    <br>komfortable programmieren kann gehören Java,
+                    <br>Python, Javascript, und Lua.
                 </p>
             </div>
-        </section>
-        
-
-        <section class="sections">
-            <div class="sectionWrapper">
-                <div class="textWrapper">
-                    <div class="card divTag">
-                        <img class="containerImage" src="./images/favicon.png" alt="">
-                    </div>
-                </div>
+            <div class="textWrapper">
+                <a class="sideText text aTag" href="index.html#skillsSection">← zurück</a>
             </div>
+            <!-- <div class="textWrapper">
+                <div class="card divTag">
+                    <img class="containerImage" src="./images/favicon.png" alt="">
+                </div>
+            </div> -->
         </section>
 
 
@@ -63,7 +79,9 @@
         </div>
 
 
-        <button class="mobileButton" id="open" onclick="moveNavbar()"></button>
+        <button id="open" onclick="moveNavbar()">
+            <span class="arrow"></span>
+        </button>
         <canvas id="background"></canvas>
         
         <script src="background.js"></script>

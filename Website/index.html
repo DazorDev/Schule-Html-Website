@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,7 +20,7 @@
                     <a class="link" href="about.html">Über mich</a>
                 </li>
                 <li class="element">
-                    <a class="link" href="skills.html">Skills</a>
+                    <a class="link" href="skills.html">Fähigkeiten</a>
                 </li>
                 <li class="element">
                     <a class="link" href="hobbies.html">Hobbies</a>
@@ -37,7 +37,7 @@
 
         <section class="sections mainsection" id="homeSection">
             <div class="textWrapper">
-                <h1 class="mainText  hTag text">Hallo, <br>Ich bin Daniel.</h1>
+                <h1 class="mainText hTag text">Hallo, <br>Ich bin Daniel.</h1>
             </div>
             <div class="textWrapper">
                 <div class="styleTag">
@@ -74,44 +74,64 @@
         </section>
 
 
-        <section class="sections">
+        <section class="sections" id="aboutSection">
             <div class="textWrapper">
                 <a class="link " href="about.html">
-                    <h1 class="mainText hTag text">Über mich</h1>
+                    <h1 class="mainText text hTag">Über mich</h1>
+                    <span class="bar"></span>
                 </a>
             </div>
             <div class="textWrapper">
                 <p class="sideText pTag text">
-                    Ich bin ein selbst beigebrachter Programmierer mit 
-                    <br>erfahrung in allen Themenbereichen der Informatik
-                    <br>von Kryptografie über Webdevelopment bis hin zu
-                    <br>Themen wie Spieleentwicklung und Automatisierung.
+                    Ich bin ein selbst beigebrachter Programmierer
+                    <br>mit erfahrung in allen Themenbereichen der
+                    <br>Informatik von Kryptografie über 
+                    <br>Webdevelopment bis hin zu Themen wie 
+                    <br>Spieleentwicklung und Automatisierung.
                 </p>
             </div>
         </section>
 
 
-        <section class="sections">
+        <section class="sections" id="skillsSection">
             <div class="textWrapper">
                 <a class="link " href="skills.html">
-                    <h1 class="mainText hTag text">Skills</h1>
+                    <h1 class="mainText hTag text">Fähigkeiten</h1>
+                    <span class="bar"></span>
                 </a>
             </div>
             <div class="textWrapper">
-                <p class="sideText pTag">Meine Fähigkeiten sind:</p>
+                <p class="sideText pTag">
+                        Zu meinen Fähigkeiten gehören das schnelle
+                    <br>Verstehen von verschiedenen Konzepten, aus 
+                    <br>jeglichen richtungen, Beispielsweise aus dem 
+                    <br>Bereich der Physik, z.B. bezogen auf dem aufbau
+                    <br>eines Computers durch Logikschaltern, oder aus 
+                    <br>dem Bereich der Mathematik, z.B. bezogen auf 
+                    <br>die verwendendung der O(n) schreibweise zum
+                    <br>optimieren eines Algorithmuses.
+                </p>
             </div>
         </section>
 
 
-        <section class="sections">
+        <section class="sections" id="hobbySection">
             <div class="textWrapper">
                 <a class="link " href="hobbies.html">
                     <h1 class="mainText hTag text">Hobbies</h1>
+                    <span class="bar"></span>
                 </a>
             </div>
             <div class="textWrapper">
-                <p class="sideText pTag">Meine Hobbies sind:</p>
-                <p class="sideText"></p>
+                <p class="sideText pTag">
+                        Zudem bin ich auch interessiert in das 
+                    <br>Lernen von weiteren wegen dinge zu 
+                    <br>implimentieren um meine Fähigkeiten zu
+                    <br>verbessern und zu verfeinern. 
+                    <br>Diese Fähigkeiten benutze ich dann um
+                    <br>Programme für verschiedene Aufgaben
+                    <br>zu schreiben.
+                </p>
             </div>
         </section>
 
@@ -121,7 +141,9 @@
             <span class="tag bottomTags text">&lt;/html&gt;</span>
         </div>
 
-        <button class="mobileButton" id="open" onclick="moveNavbar()"></button>
+        <button id="open" onclick="moveNavbar()">
+            <span class="arrow"></span>
+        </button>
         <canvas id="background"></canvas>
         
         <script src="background.js"></script>

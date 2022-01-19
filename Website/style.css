@@ -17,6 +17,16 @@
     --containerHeight: 15rem;
 }
 
+::-moz-selection { 
+    color: var(--bgc);
+    background: var(--textc);
+  }
+  
+::selection {
+    color: var(--maintxtc);
+    background: var(--textc);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -104,35 +114,35 @@ body{
 }
 
 .styleTag::before{
-    content: "<style>"
+    content: "<style>";
 }
 
 .styleTag::after{
-    content: "</style>"
+    content: "</style>";
 }
 
 .divTag::before{
-    content: "<div>"
+    content: "<div>";
 }
 
 .divTag::after{
-    content: "</div>"
+    content: "</div>";
 }
 
 .sectionTag::before{
-    content: "<section>"
+    content: "<section>";
 }
 
 .sectionTag::after{
-    content: "</section>"
+    content: "</section>";
 }
 
-.linkTags{
-    content: "<a>"
+.aTag::before{
+    content: "<a>";
 }
 
-.linkTags{
-    content: "</a>"
+.aTag::after{
+    content: "</a>";
 }
 
 .tag{
@@ -168,7 +178,8 @@ body{
 }
 
 .sections{
-    height: 75vh;
+    min-height: 75vh;
+    max-height: fit-content;
     overflow: hidden;
     background-color: var(--bgc);
     padding: 8rem 6rem;
@@ -211,6 +222,7 @@ body{
 
 .sideText{
     color: var(--sidetxtc);
+    font-family: CarterOne;
 }
 
 .text{
@@ -244,7 +256,7 @@ body{
 }
 
 .dynamic-text{
-    z-index: 0;
+    z-index: -1;
     margin-left: 0.3rem;
     font-family: Consolas;
     position: relative;
@@ -330,8 +342,9 @@ ul.animationWrapper .element{
     height: 60vh;
 }
 
-.mobileButton{
-    background-color: #02f093;
+button{
+    background: none;
+    border: none;
     visibility: hidden;
     width: 2rem;
     height: 2rem;
@@ -342,29 +355,25 @@ ul.animationWrapper .element{
     z-index: 5;
 }
 
+button .arrow{
+    border: solid var(--ncol);
+    border-width: 0 0.3rem 0.3rem 0;
+    display: inline-block;
+    padding: 0.5rem;
+    transform: rotate(135deg);
+    transition: 0.5s;
+}
+
+#close .arrow{
+    transform: rotate(45deg)
+}
+
 .containerText{
     color: var(--ncol);
 }
 
 .textWrapper .link{
     text-decoration: none;
-}
-
-.textWrapper .link .text{
-    color: var(--ncol);
-}
-
-.backgroundText{
-    z-index: 1;
-    opacity: 15%;
-    color: var(--bgtextc);
-    position: absolute;
-    font-size: 20vw;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    width: 100%;
-    top: 5%;
-    right: -10%;
-    text-align: center;
 }
 
 .containerImage{
@@ -379,6 +388,25 @@ ul.animationWrapper .element{
     z-index: 1;
 }
 
+.link .bar{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background-color: var(--ncol);
+    transition: 1s;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.link:hover .bar{
+    width: 100%;
+}
+
+
+
 @keyframes typing {
     100%{
         left:110%;
@@ -388,6 +416,14 @@ ul.animationWrapper .element{
 @keyframes nextElement{
     100%{
         top: -16rem;
+    }
+}
+  
+@media (hover: hover) and (pointer: fine) {
+    .link:hover .bar{
+        left: 0;
+        right: auto;
+        width: 100%;
     }
 }
 
@@ -411,11 +447,14 @@ ul.animationWrapper .element{
     .navbar{
         left: -10rem;
     }
-    .mobileButton{
+    button{
         visibility: visible;
     }
     .backgroundText{
         right: -5%;
+    }
+    .sideText{
+        font-size: 0.8rem;
     }
 }
 
@@ -430,5 +469,11 @@ ul.animationWrapper .element{
     }
     .backgroundText{
         right: 0;
+    }
+    .sections{
+        padding: 8rem 2rem;
+    }
+    .sideText{
+        font-size: 0.7rem;
     }
 }

@@ -10,7 +10,7 @@ class Particle{
     #posY;
     #accelerationX;
     #accelerationY;
-    #color = "rgb(20,20,20,0.5)";
+    #color = "rgb(20,20,20,0.2)";
     constructor(){
         this.#radius = Math.random()*4
         this.#posX = Math.random()*canvas.width;
