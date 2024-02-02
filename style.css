@@ -1,0 +1,479 @@
+:root{
+    --bgc:#1d1d1d;
+    --textc:#515152;
+    --bgtextc: #3f3f3f;
+    --containerblack:#141414;
+    --maintxtc:white;
+    --sidetxtc:rgb(148, 148, 148);
+    --ncol:#02f093;
+    --tagSize: 1.5rem;
+    --mainTxtSize: 5rem;
+    --bracketfontsize: 2.5rem;
+    --navbarwidth: 8rem;
+    --navbarfontsize: 1.5rem;
+    --navbarmargin: 1rem;
+    --textWrapperMarginLeft: 9rem;
+    --containerWidth: 20rem;
+    --containerHeight: 15rem;
+}
+
+::-moz-selection { 
+    color: var(--bgc);
+    background: var(--textc);
+  }
+  
+::selection {
+    color: var(--maintxtc);
+    background: var(--textc);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+*::before{
+    font-family: laBelleAurore;
+    font-size: var(--tagSize);
+    position: absolute;
+    top: -1.5em;
+    left: -1em;
+    color: var(--textc);
+    font-weight: normal;
+    z-index: 2;
+}
+
+*::after{
+    font-family: laBelleAurore;
+    font-size: var(--tagSize);
+    position: absolute;
+    left: -1em;
+    bottom: -1.5em;
+    color: var(--textc);
+    font-weight: normal;
+    z-index: 2;
+}
+
+@font-face{
+    font-family: pacifico;
+    src: url("./fonts/Pacifico.eot");
+    src: url("./fonts/Pacifico.eot?#iefix") format('embedded-opentype'),
+         url("./fonts/Pacifico.woff2") format('woff'),
+         url("./fonts/Pacifico.woff2") format('woff2'),
+         url("./fonts/Pacifico.ttf") format('truetype'),
+         url("./fonts/Pacifico.eot") format('eot');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: laBelleAurore;
+    src: url("./fonts/LaBelleAurore-Regular.eot");
+    src: url('./fonts/LaBelleAurore-Regular.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/LaBelleAurore-Regular.woff2') format('woff'),
+         url('./fonts/LaBelleAurore-Regular.woff2') format('woff2'),
+         url('./fonts/LaBelleAurore-Regular.ttf') format('truetype'),
+         url('./fonts/LaBelleAurore-Regular.eot') format('eot');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: CarterOne;
+    src: url("./fonts/CarterOne-Regular.eot");
+    src: url('./fonts/CarterOne-Regular.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/CarterOne-Regular.woff2') format('woff'),
+         url('./fonts/CarterOne-Regular.woff2') format('woff2'),
+         url('./fonts/CarterOne-Regular.ttf') format('truetype'),
+         url('./fonts/CarterOne-Regular.eot') format('eot');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    background-color: var(--bgc);
+    overflow-x: hidden;
+    width: 100%;
+    height: fit-content;
+}
+
+.pTag::before{
+    content: "<p>";
+}
+
+.pTag::after{
+    content: "</p>";
+}
+
+.hTag::before{
+    content: "<h1>";
+}
+
+.hTag::after{
+    content: "</h1>";
+}
+
+.styleTag::before{
+    content: "<style>";
+}
+
+.styleTag::after{
+    content: "</style>";
+}
+
+.divTag::before{
+    content: "<div>";
+}
+
+.divTag::after{
+    content: "</div>";
+}
+
+.sectionTag::before{
+    content: "<section>";
+}
+
+.sectionTag::after{
+    content: "</section>";
+}
+
+.aTag::before{
+    content: "<a>";
+}
+
+.aTag::after{
+    content: "</a>";
+}
+
+.tag{
+    color: var(--textc);
+    font-family: laBelleAurore;
+    font-size: var(--tagSize);
+    font-weight: normal;
+}
+
+.tagTags{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.bottomTags{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+}
+
+.topTags::after{
+    position: absolute;
+    content: "<body>";
+    left: 1.5em;
+}
+
+.bottomTags::before{
+    position: absolute;
+    content: "</body>";
+    left: 1.5em;
+}
+
+.sections{
+    min-height: 75vh;
+    max-height: fit-content;
+    overflow: hidden;
+    background-color: var(--bgc);
+    padding: 8rem 6rem;
+    width: 100%;
+    position: relative;
+}
+
+.mainText{
+    text-align: left;
+    color: var(--maintxtc);
+    font-size: var(--mainTxtSize);
+    font-family: CarterOne;
+    height: 100%;
+}
+
+.textWrapper{
+    z-index: 2;
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    margin-left: var(--textWrapperMarginLeft);
+    margin-top: 2rem;
+    overflow: visible;
+    margin-bottom: 3rem;
+    transition: all 1s;
+    white-space: nowrap;
+}
+
+.top{
+    margin-top: 1rem;
+    position: absolute;
+    margin-bottom: 2em;
+}
+
+.bottom{
+    margin-bottom: 1rem;
+    bottom: 0;
+    margin-top:2em;
+}
+
+.sideText{
+    color: var(--sidetxtc);
+    font-family: CarterOne;
+}
+
+.text{
+    transition: 0.5s;
+    z-index: 3;
+}
+
+.list{
+    list-style: none;
+    width: 100%;
+    height: 12rem;
+    overflow: hidden;
+    line-height: 4rem;
+}
+
+.animationWrapper{
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    height: 4rem;
+}
+
+.brackets{
+    text-align: left;
+    color: var(--maintxtc);
+    font-size: 3rem;
+    font-family: Consolas;
+    height: 100%;
+    display: inline-block;
+    font-size: var(--bracketfontsize);
+}
+
+.dynamic-text{
+    z-index: -1;
+    margin-left: 0.3rem;
+    font-family: Consolas;
+    position: relative;
+    color: var(--ncol);
+}
+
+.dynamic-text::after{
+    content: "";
+    position: absolute;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    border-left: 0.1rem solid var(--ncol);
+    background: var(--bgc);
+    animation: typing 1.5s steps(14) infinite;
+}
+
+ul.animationWrapper .element{
+    position: relative;
+    top: 0;
+    animation: nextElement 6s steps(4) infinite;
+    display: flex;
+}
+
+.navbar{
+    width: var(--navbarwidth);
+    height: 100%;
+    background-color: var(--containerblack);
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-right: var(--navbarmargin);
+    z-index: 3;
+    transition: all 0.5s;
+}
+
+.navbar .list{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .list .element .link{
+    color: var(--ncol);
+    text-align: center;
+    font-size: var(--navbarfontsize);
+    text-decoration: none;
+}
+
+.navbar .list .element{
+    left: 0;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.card{
+    width: var(--containerWidth);
+    height: var(--containerHeight);
+    background-color: var(--containerblack);
+    -webkit-box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%), 0 1px 10px 0 rgb(0 0 0 / 12%);
+    box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%), 0 1px 10px 0 rgb(0 0 0 / 12%);
+    margin: 2rem;
+    flex-basis: 50%;
+    transition: 0.5s;
+    border-top: 2px solid var(--ncol);
+}
+
+.sectionWrapper{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.mainsection{
+    height: 60vh;
+}
+
+button{
+    background: none;
+    border: none;
+    visibility: hidden;
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 2rem 2rem;
+    z-index: 5;
+}
+
+button .arrow{
+    border: solid var(--ncol);
+    border-width: 0 0.3rem 0.3rem 0;
+    display: inline-block;
+    padding: 0.5rem;
+    transform: rotate(135deg);
+    transition: 0.5s;
+}
+
+#close .arrow{
+    transform: rotate(45deg)
+}
+
+.containerText{
+    color: var(--ncol);
+}
+
+.textWrapper .link{
+    text-decoration: none;
+}
+
+.containerImage{
+    width: 100%;
+    height: 100%;
+}
+
+#background{
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 1;
+}
+
+.link .bar{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background-color: var(--ncol);
+    transition: 1s;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.link:hover .bar{
+    width: 100%;
+}
+
+
+
+@keyframes typing {
+    100%{
+        left:110%;
+    }
+}
+
+@keyframes nextElement{
+    100%{
+        top: -16rem;
+    }
+}
+  
+@media (hover: hover) and (pointer: fine) {
+    .link:hover .bar{
+        left: 0;
+        right: auto;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    :root{
+        --mainTxtSize: 4rem;
+        --bracketfontsize: 2rem;
+        --tagSize: 1.5rem
+    }
+} 
+
+@media screen and (max-width: 730px){
+    :root{
+        --mainTxtSize: 3rem;
+        --bracketfontsize: 1.5rem;
+        --textWrapperMarginLeft: 1.5rem;
+        --tagSize: 1.25rem;
+        --containerWidth: 15rem;
+        --containerHeight: 10rem;
+    }
+    .navbar{
+        left: -10rem;
+    }
+    button{
+        visibility: visible;
+    }
+    .backgroundText{
+        right: -5%;
+    }
+    .sideText{
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 530px){
+    :root{
+        --mainTxtSize: 2rem;
+        --bracketfontsize: 1rem;
+        --textWrapperMarginLeft: 1rem;
+        --tagSize: 1rem;
+        --containerWidth: 10rem;
+        --containerHeight: 10rem;
+    }
+    .backgroundText{
+        right: 0;
+    }
+    .sections{
+        padding: 8rem 2rem;
+    }
+    .sideText{
+        font-size: 0.7rem;
+    }
+}
